@@ -32,7 +32,7 @@ cd labelImg && pyrcc5 -o libs/resources.py resources.qrc
 python .\labelImg.py
 ```
 
-### Train YOLOv5 from scratch
+### Train YOLOv5 from scratch (example from Drowsiness Detection)
 
 ### 1. Create dataset.yaml
 
@@ -54,10 +54,10 @@ names: [
 download: # (optional)
 ```
 
-#### 2. Run cmd
+### 2. Run cmd
 
 ```
-python ./yolov5/train.py --img 320 --batch 16 --epochs 5 --data ./data/drowsinessDetection/dataset.yaml --weights yolov5s.pt --workers 2 --project ../data/drowsinessDetection/runs/train
+python ./yolov5/train.py --img 320 --batch 16 --epochs 100 --data ./data/drowsinessDetection/dataset.yaml --weights yolov5s.pt --workers 2 --project ../data/drowsinessDetection/runs/train
 ```
 
 <!--
@@ -83,3 +83,18 @@ End with an example of getting some data out of the system or using it for a lit
 ## Projects <a name = "projects"></a>
 
 ### 1. Drowsiness Detection (from youtube Tutorial @NicholasRenotte)
+
+
+<p align="center">
+  <img alt="Light" src="utils\drowsinessDetection\val_batch1_labels.jpg" width="80%">
+</p>
+<p align="center">
+  <img alt="Light" src="utils\drowsinessDetection\results.png" width="80%">
+</p>
+
+<p align="center">
+  <img alt="Light" src="utils\drowsinessDetection\F1_curve.png" width="
+  45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Dark" src="utils\drowsinessDetection\P_curve.png" width="45%">
+</p>
