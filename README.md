@@ -84,7 +84,6 @@ End with an example of getting some data out of the system or using it for a lit
 
 ### 1. Drowsiness Detection (from youtube Tutorial @NicholasRenotte)
 
-
 <p align="center">
   <img alt="Light" src="utils\drowsinessDetection\val_batch1_labels.jpg" width="80%">
 </p>
