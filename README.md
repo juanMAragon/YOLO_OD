@@ -14,16 +14,53 @@ Through this repository you will find some projects of my own developed using th
 
 ## Getting Started <a name = "getting_started"></a>
 
-
-
 ### Installing YOLO from Ultralytics
 
 ```
 git clone https://github.com/ultralytics/yolov5
-cd yolov5 
-pip install requirements.txt 
+cd yolov5
+pip install requirements.txt
 ```
-<!-- 
+
+### Software for label images
+
+```
+git clone https://github.com/tzutalin/labelImg
+pip install pyqt5 lxml --upgrade
+cd labelImg && pyrcc5 -o libs/resources.py resources.qrc
+
+python .\labelImg.py
+```
+
+### Train YOLOv5 from scratch
+
+### 1. Create dataset.yaml
+
+```
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: ../data/drowsinessDetection # dataset root dir
+train: images # train images
+val: images # val images
+test: # test images (optional)
+
+# Classes
+nc: 17 # number of classes
+names: [
+    "dog", "person", "cat", "tv", "car", "meatballs", "marinara sauce",
+    "tomato soup", "chicken noodle soup", "french onion soup", "chicken breast",
+    "ribs", "pulled pork", "hamburger", "cavity", "awake", "drowsy"
+] # class names
+
+download: # (optional)
+```
+
+#### 2. Run cmd
+
+```
+python ./yolov5/train.py --img 320 --batch 16 --epochs 5 --data ./data/drowsinessDetection/dataset.yaml --weights yolov5s.pt --workers 2 --project ../data/drowsinessDetection/runs/train
+```
+
+<!--
 
 A step by step series of examples that tell you how to get a development env running.
 
