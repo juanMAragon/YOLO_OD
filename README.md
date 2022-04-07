@@ -84,6 +84,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 ### 1. Drowsiness Detection (from youtube Tutorial @NicholasRenotte)
 
+<<<<<<< HEAD
 
 <p align="center">
   <img alt="Light" src="utils\drowsinessDetection\val_batch1_labels.jpg" width="80%">
@@ -97,4 +98,15 @@ End with an example of getting some data out of the system or using it for a lit
   45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
   <img alt="Dark" src="utils\drowsinessDetection\P_curve.png" width="45%">
+=======
+![batch](utils\drowsinessDetection\val_batch1_labels.jpg)
+![results](utils\drowsinessDetection\results.png)
+
+<p align="center">
+  <img alt="Light" src="utils\drowsinessDetection\F1_curve.png" width="33%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Dark" src="utils\drowsinessDetection\P_curve.png" width="33%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Dark" src="utils\drowsinessDetection\R_curve.png" width="33%">
+>>>>>>> e9f9d9e2eceddcbbf6a0a71dc05fcbca705f5ddb
 </p>
